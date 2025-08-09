@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: #fff;
+  color: #0f172a;
+}
+
+.gantt-board {
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.gantt-months {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #fff;
+  border-bottom: 1px solid #E5E7EB;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #111827;
+}
+
+.gantt-month {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  border-right: 1px solid #F1F5F9;
+}
+
+.gantt-days {
+  display: flex;
+  position: sticky;
+  top: 28px;
+  z-index: 4;
+  background: #fff;
+  border-bottom: 1px solid #E5E7EB;
+  color: #475569;
+  font-size: 12px;
+}
+
+.gantt-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #F1F5F9;
+  padding: 0 6px;
+}
+
+.gantt-day .w {
+  opacity: .7;
+}
+
+.gantt-day .n {
+  font-weight: 700;
+}
+
+.gantt-track {
+  position: relative;
+}
+
+.gantt-rows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.gantt-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.gantt-row.alt {
+  background: #f5f7fb;
+}
+
+.row-label {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  font-size: 12px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.gantt-grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #F1F5F9;
+}
+
+.vline.major {
+  width: 2px;
+  background: #E2E8F0;
+}
+
+.gantt-bars {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.bar {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15), 0 1px 4px rgba(0, 0, 0, .15);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #0b1220;
+  border: 1px solid rgba(0, 0, 0, .08);
+}
+
+.gantt-bar {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .12), 0 1px 4px rgba(0, 0, 0, .12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 10px;
+  gap: 2px;
+  color: #0b1220;
+  border: 1px solid rgba(0, 0, 0, .08);
+  overflow: hidden;
+}
+
+.bar-name {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-dates {
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(0, 0, 0, .7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
